@@ -4,45 +4,154 @@
     padding: 0;
 }
 
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    color: white;
-    padding: 20px 0;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-    max-width: 1200px;
-}
-
-nav ul {
+/* Navbar Styles */
+.navbar-menu {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 10px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+.navbar-menu li {
+    position: relative; 
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    /* margin-right: 15px; */
 }
 
-nav ul li a:hover {
-    color: #cddc39;
+.button-burger{
+    display: inline-block; /* Agar bisa memiliki padding dan margin */
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    margin: 5px; /* Ruang antar tombol */
+    background-color: #4A628A; /* Warna latar belakang tombol */
+    color: white; /* Warna teks */
+    text-decoration: none; /* Menghapus garis bawah */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    transition: background-color 0.3s; /* Transisi untuk efek hover */
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #28a745; /* Hijau seperti di gambar */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 0; /* Menghilangkan padding default */
+    list-style: none;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    width: 100%;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effects */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Warna abu-abu saat hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add hover effect for button */
+.dropdown:hover .dropbtn {
+    background-color: #218838; /* Warna saat tombol di-hover */
+}
+/* Center the header */
+header {
+    display: flex;
+    justify-content: start;
+    background-color: #7AB2D3;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .judul {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.about-me{
+    text-align: center; /* Centers the image container */
+    width: 90%;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: inline-block; /* Makes the image behave like an inline block so it can be centered */
+    max-width: 200px; /* Optionally control the size of the image */
+    height: auto;
+    margin: 20px auto; /* Ensures that there’s space around the image */
+}
+
+/* Efek saat gambar di-hover */
+#gambarUtama {
+    transition: transform 0.6s ease-in-out; /* Animasi halus */
+}
+
+#gambarUtama:hover {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+}
+
 
 .section {
     padding: 60px 0;
@@ -63,7 +172,7 @@ nav ul li a:hover {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #4CAF50;
+    color: #4A628A;
 }
 
 .project-grid {
@@ -82,7 +191,7 @@ h2 {
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -100,7 +209,7 @@ h2 {
     display: inline-block; /* Agar bisa memiliki padding dan margin */
     padding: 10px 20px; /* Ruang di dalam tombol */
     margin: 5px; /* Ruang antar tombol */
-    background-color: #4CAF50; /* Warna latar belakang tombol */
+    background-color: #4A628A; /* Warna latar belakang tombol */
     color: white; /* Warna teks */
     text-decoration: none; /* Menghapus garis bawah */
     border-radius: 5px; /* Sudut tombol melengkung */
@@ -108,12 +217,11 @@ h2 {
 }
 
 .button:hover {
-    background-color: #45a049; /* Warna saat hover */
+    background-color: #3F4D78; /* Warna saat hover */
 }
 
 
 footer {
-    text-align: center;
     padding: 20px 0;
     background: #333;
     color: white;

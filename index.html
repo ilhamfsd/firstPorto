@@ -10,23 +10,31 @@
 <body>
     <header>
         <div class="container">
-            <h1>Nama Anda</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#projects">Proyek</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+            <nav class="navbar">
+                <ul class="navbar-menu">
+                    <li class="dropdown">
+                        <a style="text-decoration:none" href="#" class="button-burger">&#9776;</a> <!-- Dropdown menu label -->
+                        <ul class="dropdown-content">
+                            <li><a href="#about">Tentang</a></li>
+                            <li><a href="#projects">Proyek</a></li>
+                            <li><a href="#contact">Kontak</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
+        </div>
+        <div class="judul">
+            <h1>Ilham Fadhilah Sanni Darmawan's Portofolio</h1>
         </div>
     </header>
 
     <section id="about" class="section">
-        <div class="container">
+        <div class="about-me">
+            <img id="gambarUtama" src="foto.jpg" alt="Ilham Fadhilah Sanni Darmawan" width="200" class="rounded-circle img-thumbnail">
             <h2>Tentang Saya</h2>
             <p>Saya merupakan mahasiswa S1 informatika di Kampus Telkom University dan telah menyelesaikan perkuliahan tingkat 1 dengan IPK 3.6. Selama kuliah, saya telah mempelajari berbagai konsep dasar dalam pemrograman, khususnya dengan bahasa Golang. Meskipun baru menguasai dasar-dasarnya, saya memiliki keinginan yang besar untuk terus belajar dan mengembangkan kemampuan saya. Saya juga memiliki kemampuan komunikasi yang baik, kemampuan bekerja sama dalam tim, dan keinginan yang kuat untuk belajar hal baru.</p>
         </div>
-    </section>
+    </section>    
 
     <section id="projects" class="section">
         <div class="container">
@@ -66,7 +74,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Nama Anda. Semua hak dilindungi.</p>
+            <p></p>
         </div>
     </footer>
 

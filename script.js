@@ -14,3 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+
+// Mengubah gambar saat hover
+document.getElementById("gambarUtama").addEventListener("mouseover", function() {
+    
+    this.src = "formal.jpg"; // Ganti dengan gambar baru saat hover
+});
+
+// Mengembalikan gambar ke awal saat kursor keluar
+document.getElementById("gambarUtama").addEventListener("mouseout", function() {
+    this.src = "foto.jpg"; // Kembalikan ke gambar awal
+});
+
+
